@@ -9,24 +9,33 @@
 </head>
 <body>
   <h1>Message App</h1>
-  <h2>Teacher</h2>
+  <h2>Teacher Message</h2>
   <div id="teacher"></div>
   <form>
-    <input type="text" id="teacher-input">
+    <input type="text" placeholder="write your message" id="teacher-message" required>
+    <input type="text" placeholder="first name" id="teacher-first-name" required>
+    <input type="text" placeholder="last name" id="teacher-last-name" required>
+    <input type="text" placeholder="email" id="teacher-email" required>
     <button type="button" id="teacher-button">Teacher Send</button>
   </form>
   
-  <h2>Parent</h2>
-  <div id="parent"></div>
+  <h2>Parent Message</h2>
+  <div id="parent-container"></div>
   <form>
-    <input type="text" id="parent-input">
+    <input type="text" placeholder="write your message" id="parent-message" required>
+    <input type="text" placeholder="first name" id="parent-first-name" required>
+    <input type="text" placeholder="last name"  id="parent-last-name" required>
+    <input type="text" placeholder="email"  id="parent-email" required>
     <button type="button" id="parent-button">Parent Send</button>
   </form>
   
-  <h2>student</h2>
+  <h2>student Message</h2>
   <div id="student">student</div>  
   <form>
-    <input type="text" id="student-input">
+    <input type="text"  placeholder="write your message" id="student-message" required>
+    <input type="text" placeholder="first name" id="student-first-name" required>
+    <input type="text" placeholder="last name" id="student-last-name" required>
+    <input type="text" placeholder="email" id="student-email" required>    
     <button type="button" id="student-button">student send</button>
   </form>   
 </body>
