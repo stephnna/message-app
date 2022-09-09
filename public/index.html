@@ -5,12 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Message App</title>
-  <script type="module" src="/dist/index.js"></script>
+  <script type="module" src="/dist/parent.js"></script>
+  <script type="module" src="/dist/teacher.js"></script>
+  <script type="module" src="/dist/student.js"></script>
 </head>
 <body>
   <h1>Message App</h1>
   <h2>Teacher Message</h2>
-  <div id="teacher"></div>
+  <div id="teacher-container"></div>
   <form>
     <input type="text" placeholder="write your message" id="teacher-message" required>
     <input type="text" placeholder="first name" id="teacher-first-name" required>
@@ -30,7 +32,7 @@
   </form>
   
   <h2>student Message</h2>
-  <div id="student">student</div>  
+  <div id="student-container">student</div>  
   <form>
     <input type="text"  placeholder="write your message" id="student-message" required>
     <input type="text" placeholder="first name" id="student-first-name" required>
