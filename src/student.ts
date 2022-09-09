@@ -19,7 +19,8 @@ class Student {
   
   renderStudentMessage = (message: userDetail[] ) => {
     const studentMessage = document.getElementById('student-container') as HTMLDivElement;
-    let messageContainer = '';
+    const studentTOTeacher = document.getElementById('student-to-teacher') as HTMLDivElement;
+     let messageContainer = '';
     message.forEach((arrayItem) => {      
       // the above line of code increses the value of each index of the array of oject
       const messageContent = 
@@ -34,6 +35,7 @@ class Student {
       messageContainer += messageContent;
     });
     studentMessage.innerHTML = messageContainer;
+    studentTOTeacher.innerHTML = messageContainer;
   };
 
  public createStudentMessage() {

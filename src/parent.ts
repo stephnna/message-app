@@ -19,6 +19,7 @@ class Parent {
   
   renderParentMessage = (message: userDetail[] ) => {
     const parentMessage = document.getElementById('parent-container') as HTMLDivElement;
+    const parentToTeacher = document.getElementById('parent-to-teacher') as HTMLDivElement;
     
     let messageContainer = '';
     message.forEach((arrayItem) => {      
@@ -35,6 +36,7 @@ class Parent {
       messageContainer += messageContent;
     });
     parentMessage.innerHTML = messageContainer;
+    parentToTeacher.innerHTML = messageContainer;    
   };
 
  public createParentMessage() {  
