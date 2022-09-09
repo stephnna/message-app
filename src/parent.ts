@@ -57,7 +57,7 @@ class Parent {
          };
          this.messageArray.push(newMessage);         
          this.renderParentMessage(this.messageArray);
-         console.log(this.messageArray);   
+            
   }) 
 }
 }
