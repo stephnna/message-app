@@ -13,11 +13,12 @@ type userDetail = {
 }
 
       //  parent as a type of user implements user
-class Student {  
+class Student { 
+  messageArray: userDetail[] = []; 
   public constructor() {}
   
   renderStudentMessage = (message: userDetail[] ) => {
-    const studentMessage = document.getElementById('student-message') as HTMLDivElement;
+    const studentMessage = document.getElementById('student-container') as HTMLDivElement;
     let messageContainer = '';
     message.forEach((arrayItem) => {      
       // the above line of code increses the value of each index of the array of oject
@@ -35,7 +36,6 @@ class Student {
   };
 
  public createStudentMessage() {
-  const messageArray: userDetail[] = [];
   const studentButton = document.getElementById('student-button') as HTMLButtonElement;
   studentButton.addEventListener("click", () => {
     {
@@ -54,8 +54,8 @@ class Student {
         email: email.value, 
         createdAt: new Date,       
          };
-         messageArray.push(newMessage);
-         this.renderStudentMessage(messageArray);                     
+         this.messageArray.push(newMessage);
+         this.renderStudentMessage(this.messageArray);                     
     };
   }) 
 }

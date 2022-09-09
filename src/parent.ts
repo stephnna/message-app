@@ -14,10 +14,11 @@ type userDetail = {
 
       //  parent as a type of user implements user
 class Parent {  
+  messageArray: userDetail[] = [];
   public constructor() {}
   
   renderParentMessage = (message: userDetail[] ) => {
-    const parentMessage = document.getElementById('parent-message') as HTMLDivElement;
+    const parentMessage = document.getElementById('parent-container') as HTMLDivElement;
     let messageContainer = '';
     message.forEach((arrayItem) => {      
       // the above line of code increses the value of each index of the array of oject
@@ -27,18 +28,18 @@ class Parent {
         <div>${arrayItem.message}</div> 
         <div>${arrayItem.firstName}</div>
         <div>${arrayItem.lastName}</div> 
-        <div>${arrayItem.email}</div>    
+        <div>${arrayItem.email}</div>        
+        <div>${arrayItem.createdAt}</div>    
       </div><hr>`;
       messageContainer += messageContent;
     });
     parentMessage.innerHTML = messageContainer;
   };
 
- public createParentMessage() {
-  const messageArray: userDetail[] = [];
+ public createParentMessage() {  
   const parentButton = document.getElementById('parent-button') as HTMLButtonElement;
   parentButton.addEventListener("click", () => {
-    {
+   
       const parentMessage = document.getElementById('parent-message') as HTMLInputElement;
       const firstName = document.getElementById('parent-first-name') as HTMLInputElement;
       const lastName = document.getElementById('parent-last-name') as HTMLInputElement;
@@ -54,9 +55,9 @@ class Parent {
         email: email.value, 
         createdAt: new Date,       
          };
-         messageArray.push(newMessage);
-         this.renderParentMessage(messageArray);                     
-    };
+         this.messageArray.push(newMessage);         
+         this.renderParentMessage(this.messageArray);
+         console.log(this.messageArray);   
   }) 
 }
 }
