@@ -19,6 +19,7 @@ class Parent {
   
   renderParentMessage = (message: userDetail[] ) => {
     const parentMessage = document.getElementById('parent-container') as HTMLDivElement;
+    
     let messageContainer = '';
     message.forEach((arrayItem) => {      
       // the above line of code increses the value of each index of the array of oject

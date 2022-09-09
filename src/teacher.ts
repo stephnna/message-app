@@ -19,7 +19,9 @@ class Teacher {
   
   renderTeacherMessage = (message: userDetail[] ) => {
     const teacherMessage = document.getElementById('teacher-container') as HTMLDivElement;
-    let messageContainer = '';
+    const teacherParentMessage = document.getElementById('teacher-parent-container') as HTMLDivElement;
+    const teacherStudentMessage = document.getElementById('teacher-student-container') as HTMLDivElement;
+        let messageContainer = '';
     message.forEach((arrayItem) => {      
       // the above line of code increses the value of each index of the array of oject
       const messageContent = 
@@ -34,6 +36,8 @@ class Teacher {
       messageContainer += messageContent;
     });
     teacherMessage.innerHTML = messageContainer;
+    teacherParentMessage.innerHTML = messageContainer;
+    teacherStudentMessage.innerHTML = messageContainer;
   };
 
  public createteacherMessage(){
