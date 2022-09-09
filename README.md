@@ -1,24 +1,62 @@
-# New Project
+## Requirements
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+Together with this document you got how much time you have to complete this task and what programming language to use.
 
-## Available Scripts
+## What we expect from you?
+- Use OOP
+- If you understand S.O.L.I.D. principle, please use it, that's a big plus
+We prefer quality over quantity, meaning: it's better to submit quality coded un-fished task than finished task with spaghetti code.
+Use GIT as VCS
+- Your final code does not need to have "fancy" styled output. You can use console or webpage for output. Unit tests would be actually the best choice. Basically, provide us simple as possible way to see your code in action.
+## What we want you to build?
+- You need to code core structure for messaging app.
 
-### npm start
+- This message app have 3 different user types: Student, Teacher and Parent
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+- Each user type should have follow:
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+- User ID (required)
+- First name (required)
+- Last name (required)
+- Email (required)
+- Profile Photo (optional)
+- Difference between user types:
 
-### npm run build
+- Teachers and Parents have Salutation (optional), it's used in full name.
+Teacher can send message to any user type
+Parent and Student can send message only to Teachers
+After initialising user object we need to have following options:
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+- User object need to have option to get full name.
+For Students full name is combined from: first name + last name.
+For Teachers and Parents is built from: salutation + first name + last name.
+- We need a way to get profile picture. If we don't set profile picture on initialising user object, we need to have option to get path/url to default system avatar.
+Get email
+Get user id.
+- We need option to save user. On save we need to validate email and profile picture. For profile picture as this is only test, do not make complex validation, instead check does passed string have .jpg in file name, if not save should fail.
+Also, this save feature does not need to actually save user, instead it should only return success if validation passed, and fail if not.
+Each message need to have (all required):
 
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
+- Sender
+- Receiver
+- Message text
+- Creation time (Unix time format)
+- Message type: System or Manual
+- For each message we want to have following features
 
-### Q: What about Eject?
+- System message can only send Teacher and only to Students.
+Option to get full name of sender and receiver
+Option to get message text
+Option to get message type
+Formatted creation time
+Option to save message. Same as for saving user, we don't need actual saving, we just need validation.
+For example, if we create new message instance and we set Student as sender, but we also set message type to System, save message should fail as Teacher can only send System messages.
+How final code should look?
+We don't want you to implement database or some other data storage provider.
 
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+- We want code where you/we can create new object instances and pass hard-coded data just for tests. If coded properly, you should be able to easily connect your code with DB.
+
+- Your code should be clean and easy for read.
+
+- We are looking forward to see your final code.
+Enjoy in coding and good luck.
