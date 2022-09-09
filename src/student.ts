@@ -28,7 +28,8 @@ class Student {
         <div>${arrayItem.message}</div> 
         <div>${arrayItem.firstName}</div>
         <div>${arrayItem.lastName}</div> 
-        <div>${arrayItem.email}</div>    
+        <div>${arrayItem.email}</div>
+        <div>${arrayItem.createdAt}</div>    
       </div><hr>`;
       messageContainer += messageContent;
     });
