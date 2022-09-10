@@ -4,8 +4,9 @@
 
 - [Loom description](https://www.loom.com/share/edb58e65209548e3a70d8746d142ba19)
 
-repository.
+## Project preview
 
+![screenshot](./public/screenshot.png)
 ## Setup this app local machine
  
 - clone this repo
