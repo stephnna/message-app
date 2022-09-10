@@ -12,3 +12,7 @@
   width: 540px;
   height: 540px;
 }
+
+#parent-email-error{
+  color: red;
+}

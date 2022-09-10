@@ -11,36 +11,40 @@
 </head>
 <body>
   <h1>Message App</h1>
-  <h2>Teacher Message</h2>
+  <h2>Teacher Messages</h2>
   <div id="teacher-container"></div>
+  <div id="parent-to-teacher"></div>
+  <div id="student-to-teacher"></div>
   <form>
     <input type="text" placeholder="write your message" id="teacher-message" required>
     <input type="text" placeholder="first name" id="teacher-first-name" required>
     <input type="text" placeholder="last name" id="teacher-last-name" required>
-    <input type="text" placeholder="email" id="teacher-email" required>
+    <input type="email" name="email" placeholder="email" id="teacher-email" required>
     <button type="button" id="teacher-button">Teacher Send</button>
-  </form>
+  </form><br><br><br>
   
-  <h2>Parent Message</h2>
+  <h2>Parent Messages</h2>
   <div id="parent-container"></div>
   <div id="teacher-parent-container"></div>
-
-  <form>
+<div>
+  <form id="parent-form">
     <input type="text" placeholder="write your message" id="parent-message" required>
     <input type="text" placeholder="first name" id="parent-first-name" required>
     <input type="text" placeholder="last name"  id="parent-last-name" required>
-    <input type="text" placeholder="email"  id="parent-email" required>
+    <input type="email" placeholder="email" name="email" id="parent-email" required>  
     <button type="button" id="parent-button">Parent Send</button>
-  </form>
+  </form>  
+  <br><br><br>
+</div>
   
-  <h2>student Message</h2>
+  <h2>student Messages</h2>
   <div id="student-container"></div> 
   <div id="teacher-student-container"></div> 
   <form>
     <input type="text"  placeholder="write your message" id="student-message" required>
     <input type="text" placeholder="first name" id="student-first-name" required>
     <input type="text" placeholder="last name" id="student-last-name" required>
-    <input type="text" placeholder="email" id="student-email" required>    
+    <input type="email" name="email" placeholder="email" id="student-email" required>    
     <button type="button" id="student-button">student send</button>
   </form>   
 </body>
