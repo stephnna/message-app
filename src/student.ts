@@ -1,16 +1,5 @@
 import {v4 as uuidV4} from "uuid";
-
-
-// creates type that holds all the user details
-type userDetail = {
-  id: string,
-  message: string,
-  firstName: string,
-  lastName: string,
-  email: string,
-  photo?: File, 
-  createdAt: Date, 
-}
+import type { userDetail } from "./userDetail";
 
       //  parent as a type of user implements user
 class Student { 
@@ -24,13 +13,12 @@ class Student {
     message.forEach((arrayItem) => {      
       // the above line of code increses the value of each index of the array of oject
       const messageContent = 
-      `<div>       
-        <div>${arrayItem.id}</div>     
-        <div>${arrayItem.message}</div> 
-        <div>${arrayItem.firstName}</div>
-        <div>${arrayItem.lastName}</div> 
-        <div>${arrayItem.email}</div>
-        <div>${arrayItem.createdAt}</div>    
+      `<div> 
+        <h2>From student: ${arrayItem.firstName} ${arrayItem.lastName}</h2>      
+        <div>ID: ${arrayItem.id}</div>                 
+        <div>email: ${arrayItem.email}</div>             
+        <div>Message: ${arrayItem.message}</div>       
+        <div>Date sent: ${arrayItem.createdAt.toLocaleString()}</div>    
       </div><hr>`;
       messageContainer += messageContent;
     });
@@ -47,13 +35,16 @@ class Student {
       const lastName = document.getElementById('student-last-name') as HTMLInputElement;
       const email = document.getElementById('student-email') as HTMLInputElement;
         
-      if (studentMessage?.value === '' || studentMessage?.value == null) return;    
-
+      if (studentMessage?.value === '' || studentMessage?.value == null ||
+      firstName.value === '' || firstName.value == null ||
+      email.value === '' || email.value == null) return;    
+     
       const newMessage = {        
         id: uuidV4(),
         message: studentMessage.value,
         firstName: firstName.value,
         lastName: lastName.value,
+        fullName: firstName.value + lastName.value,
         email: email.value, 
         createdAt: new Date,       
          };
