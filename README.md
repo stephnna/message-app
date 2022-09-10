@@ -1,6 +1,6 @@
 ## Project demo
 
-- [Test it live](https://stephnna.github.io/message-app/public/)
+- [Test it live](https://stephnna.github.io/message-app/build/)
 
 - [Loom description](https://www.loom.com/share/edb58e65209548e3a70d8746d142ba19)
 
