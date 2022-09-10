@@ -24,6 +24,7 @@ We prefer quality over quantity, meaning: it's better to submit quality coded un
 Use GIT as VCS
 - Your final code does not need to have "fancy" styled output. You can use console or webpage for output. Unit tests would be actually the best choice. Basically, provide us simple as possible way to see your code in action.
 ## What we want you to build?
+
 - You need to code core structure for messaging app.
 
 - This message app have 3 different user types: Student, Teacher and Parent
@@ -59,7 +60,7 @@ Also, this save feature does not need to actually save user, instead it should o
 - Message text
 - Creation time (Unix time format)
 - Message type: System or Manual
-- For each message we want to have following features
+##  For each message we want to have following features
 
 - System message can only send Teacher and only to Students.
 Option to get full name of sender and receiver
