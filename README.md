@@ -4,7 +4,7 @@
 
 repository.
 
-## Setup this app on any local computer following the steps listed below in order
+## Setup this app local machine
  
 - clone this repo
 - `cd message-app` to enter the folder
@@ -48,7 +48,9 @@ Get email
 Get user id.
 - We need option to save user. On save we need to validate email and profile picture. For profile picture as this is only test, do not make complex validation, instead check does passed string have .jpg in file name, if not save should fail.
 Also, this save feature does not need to actually save user, instead it should only return success if validation passed, and fail if not.
-Each message need to have (all required):
+
+
+## Each message need to have (all required):
 
 - Sender
 - Receiver
@@ -64,7 +66,9 @@ Option to get message type
 Formatted creation time
 Option to save message. Same as for saving user, we don't need actual saving, we just need validation.
 For example, if we create new message instance and we set Student as sender, but we also set message type to System, save message should fail as Teacher can only send System messages.
-How final code should look?
+
+## How final code should look?
+
 We don't want you to implement database or some other data storage provider.
 
 - We want code where you/we can create new object instances and pass hard-coded data just for tests. If coded properly, you should be able to easily connect your code with DB.
