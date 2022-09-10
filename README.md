@@ -1,7 +1,5 @@
 ## Project demo
 
-- [Live Demo](https://stephnna.github.io/message-app/public/)
-
 - [Loom description](https://www.loom.com/share/edb58e65209548e3a70d8746d142ba19)
 
 ## Requirements
